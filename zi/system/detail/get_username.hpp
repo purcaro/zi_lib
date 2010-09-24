@@ -23,6 +23,8 @@
 
 #include <zi/utility/assert.hpp>
 
+#include <string>
+
 namespace zi {
 namespace system {
 namespace detail {

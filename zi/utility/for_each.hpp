@@ -32,6 +32,7 @@
 #  define FOR_EACH_RANGE( it, begin, end )                              \
     for (__typeof__( begin ) it = ( begin ); it != ( end ); ++it)
 
+/*
 #ifndef foreach
 #  define foreach( it, cnt ) FOR_EACH( it, cnt )
 #endif
@@ -46,7 +47,7 @@
 
 #else
 #  error "can't define FOR_EACH macros with no __typeof__ defined"
-
+*/
 #endif
 
 #endif
