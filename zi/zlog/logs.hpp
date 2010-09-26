@@ -129,7 +129,7 @@ struct log_sinks: enable_singleton_of_this< log_sinks >
 
 namespace {
 
-static log_sinks &log_sinks_ = log_sinks::instance();
+//static log_sinks &log_sinks_ = log_sinks::instance();
 
 }
 
