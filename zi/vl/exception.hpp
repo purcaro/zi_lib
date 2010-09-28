@@ -16,26 +16,11 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#ifndef ZI_UTILITY_ASSERT_HPP
-#define ZI_UTILITY_ASSERT_HPP 1
-#
-#include <zi/config/config.hpp>
-#include <cassert>
-#
-#undef ZI_VERIFY
-#
-#if defined( NDEBUG ) || defined ( ZI_NO_DEBUG )
-#
-#  define ZI_VERIFY( what )   ( static_cast< void >( what ) )
-#  define ZI_VERIFY_T( what ) ( static_cast< void >( what ) )
-#  define ZI_VERIFY_0( what ) ( static_cast< void >( what ) )
-#
-#else
-#
-#  define ZI_VERIFY( what )   assert( what )
-#  define ZI_VERIFY_T( what ) assert( what )
-#  define ZI_VERIFY_0( what ) assert( !( what ) )
-#
-#endif
-#
+#ifndef ZI_VL_EXCEPTION_HPP
+#define ZI_VL_EXCEPTION_HPP 1
+
+#include <stdexcept>
+
+
+
 #endif
