@@ -32,7 +32,8 @@
 #  define FOR_EACH_RANGE( it, begin, end )                              \
     for (__typeof__( begin ) it = ( begin ); it != ( end ); ++it)
 
-#  ifndef ZI_NO_LOWERCASE_FOREACH
+
+#  ifdef ZI_LOWERCASE_FOREACH
 #
 #    ifndef foreach
 #      define foreach( it, cnt ) FOR_EACH( it, cnt )
