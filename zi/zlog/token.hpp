@@ -73,7 +73,7 @@ public:
     typename disable_if< is_printable< T >::value, token& >::type
     operator<< ( const T& v )
     {
-        out_ << " " << debug::printable_type< T >() << " @"
+        out_ << " <" << debug::printable_type< T >() << " @"
              << address_of( v ) << ">";
         return *this;
     }
