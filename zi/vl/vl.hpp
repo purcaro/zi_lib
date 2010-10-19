@@ -16,9 +16,12 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#ifndef ZI_UNORDERED_SET_HPP
-#define ZI_UNORDERED_SET_HPP 1
+#ifndef ZI_VL_VL_HPP
+#define ZI_VL_VL_HPP 1
 
-#include <zi/bits/unordered_set.hpp>
+#include <zi/vl/vec.hpp>
+#include <zi/vl/mat.hpp>
+#include <zi/vl/quat.hpp>
 
 #endif
+

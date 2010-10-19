@@ -16,13 +16,16 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#ifndef ZI_VL_VL_PREFIX
-#define ZI_VL_VL_PREFIX 1
+#ifndef ZI_META_META_HPP
+#define ZI_META_META_HPP 1
 
-#define ZI_VL_ENABLE_IF( cond, tp )                           \
-    typename ::zi::enable_if< ( cond ), tp >::type*
-
-#define ZI_VL_DISABLE_IF( cond, tp )                          \
-    typename ::zi::disable_if< ( cond ), tp >::type*
+#include <zi/meta/true_type.hpp>
+#include <zi/meta/false_type.hpp>
+#include <zi/meta/null_type.hpp>
+#include <zi/meta/bool.hpp>
+#include <zi/meta/if.hpp>
+#include <zi/meta/and.hpp>
+#include <zi/meta/or.hpp>
 
 #endif
+

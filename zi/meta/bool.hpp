@@ -16,35 +16,22 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#ifndef ZI_BITS_HASH_HPP
-#define ZI_BITS_HASH_HPP 1
+#ifndef ZI_META_BOOL_HPP
+#define ZI_META_BOOL_HPP 1
 
-#include <zi/config/config.hpp>
-
-#ifdef __GXX_EXPERIMENTAL_CXX0X__
-#  include <functional>
-#  define ZI_HASH_NAMESPACE ::std
-#  define ZI_HASH_EXPORT_NAMESPACE_BEGIN namespace std {
-#  define ZI_HASH_EXPORT_NAMESPACE_END }
-#else
-#  if defined( ZI_USE_TR1 ) || defined( ZI_NO_BOOST )
-#    include <tr1/functional>
-#    define ZI_HASH_NAMESPACE ::std::tr1
-#    define ZI_HASH_EXPORT_NAMESPACE_BEGIN namespace std { namespace tr1 {
-#    define ZI_HASH_EXPORT_NAMESPACE_END } }
-#  else
-#    include <boost/functional/hash.hpp>
-#    define ZI_HASH_NAMESPACE ::boost
-#    define ZI_HASH_EXPORT_NAMESPACE_BEGIN namespace boost {
-#    define ZI_HASH_EXPORT_NAMESPACE_END }
-#  endif
-#endif
+#include <zi/meta/true_type.hpp>
+#include <zi/meta/false_type.hpp>
+#include <zi/meta/null_type.hpp>
 
 namespace zi {
+namespace meta {
 
-using ZI_HASH_NAMESPACE::hash;
+template< bool B > struct bool_c;
 
+template<> struct bool_c< true  >: true_  {};
+template<> struct bool_c< false >: false_ {};
+
+} // namespace meta
 } // namespace zi
 
-#undef ZI_HASH_NAMESPACE
 #endif

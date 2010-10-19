@@ -16,11 +16,18 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#ifdef ZI_VL_VL_PREFIX
+#ifndef ZI_META_FALSE_TYPE_HPP
+#define ZI_META_FALSE_TYPE_HPP 1
 
-#undef ZI_VL_VL_PREFIX
+#include <zi/bits/type_traits.hpp>
 
-#undef ZI_VL_ENABLE_IF
-#undef ZI_VL_DISABLE_IF
+namespace zi {
+namespace meta {
+
+using ::zi::false_type;
+typedef ::zi::false_type false_;
+
+} // namespace meta
+} // namespace zi
 
 #endif
