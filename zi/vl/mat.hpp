@@ -528,6 +528,7 @@ public:
         return res;
     }
 
+  /*
     template< class O >
     bool equals( const mat< O, N >& rhs,
                  typename detail::promote< T, O >::type epsilon =
@@ -545,7 +546,7 @@ public:
         }
         return true;
     }
-
+  */
     bool equals( const mat< T, N >& rhs,
                  T epsilon =
                  std::numeric_limits< T >::epsilon() ) const
