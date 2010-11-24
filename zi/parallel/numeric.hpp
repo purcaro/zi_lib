@@ -16,11 +16,27 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#ifndef ZI_VL_EXCEPTION_HPP
-#define ZI_VL_EXCEPTION_HPP 1
+#ifndef ZI_PARALLEL_NUMERIC_HPP
+#define ZI_PARALLEL_NUMERIC_HPP 1
 
-#include <stdexcept>
+#ifdef ZI_USE_OPENMP
+#  include <parallel/numeric>
+#  define ZI_PARALLEL_NUMERIC_NAMESPACE __gnu_parallel
+#else
+#  include <numeric>
+#  define ZI_PARALLEL_NUMERIC_NAMESPACE std
+#endif
 
+namespace zi {
 
+using ZI_PARALLEL_NUMERIC_NAMESPACE::accumulate;
+using ZI_PARALLEL_NUMERIC_NAMESPACE::adjacent_difference;
+using ZI_PARALLEL_NUMERIC_NAMESPACE::inner_product;
+using ZI_PARALLEL_NUMERIC_NAMESPACE::partial_sum;
+
+} // namespace zi
+
+#undef ZI_PARALLEL_NUMERIC_NAMESPACE
 
 #endif
+
