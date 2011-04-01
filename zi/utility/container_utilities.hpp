@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2010  Aleksandar Zlateski <zlateski@mit.edu>
+// Copyright (C) 2011  Aleksandar Zlateski <zlateski@mit.edu>
 // ----------------------------------------------------------
 //
 // This program is free software: you can redistribute it and/or modify
@@ -16,9 +16,21 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#ifndef ZI_CONCURRENCY_WIN32_RWMUTEX_HPP
-#define ZI_CONCURRENCY_WIN32_RWMUTEX_HPP 1
+#ifndef ZI_UTILITY_CONTAINER_UTILITIES_HPP
+#define ZI_UTILITY_CONTAINER_UTILITIES_HPP 1
 
-#include <zi/concurrency/detail/rwmutex_impl.hpp>
+namespace zi {
+namespace containers {
+
+
+template <typename Container>
+void clear( Container& x )
+{
+    Container y;
+    y.swap(x);
+};
+
+} // namespace containers
+} // namespace zi
 
 #endif
