@@ -62,6 +62,7 @@ public:
         }
     }
 
+
     void acquire( int64_t n = 1 ) const
     {
         mutex::guard g( m_ );
